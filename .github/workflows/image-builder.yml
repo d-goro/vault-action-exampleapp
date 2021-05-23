@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Import Secrets
-        uses: hashicorp/vault-action@v2.0.1
+        uses: hashicorp/vault-action@v2.2.0
         env:
             ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         with:
