@@ -8,6 +8,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Import Secrets
         uses: hashicorp/vault-action@v2.0.1
+        env:
+            ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         with:
           url: http://127.0.0.1:8200
           tlsSkipVerify: true
