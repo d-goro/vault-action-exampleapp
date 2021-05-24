@@ -15,6 +15,6 @@ jobs:
           tlsSkipVerify: true
           token: ${{ secrets.VAULT_TOKEN }}
           secrets: |
-            secret/data/ci /ci/app_secret | XXX ;
+            secret/data/ci /ci/app_secret2 | XXX ;
       - name: Build Docker Image
         run: docker build . --file Dockerfile --build-arg app_secret="${{ env.XXX }}" -t vault-action-exampleapp
