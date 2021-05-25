@@ -17,4 +17,4 @@ jobs:
           secrets: |
             secret/data/ci app_secret | app_secret ;
       - name: Secret
-        run: echo $app_secret
+        run: set | grep app_secret
